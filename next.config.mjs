@@ -1,19 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  async headers() {
-    return  [
-      {
-        source: "/:slug*",
-        headers: [
-          {
-            key: "Permissions-Policy",
-            value: "interest-cohort=()"
-          }
-        ]
-      }
-    ]
-  }
+  output: 'export'
 };
 
 export default nextConfig;

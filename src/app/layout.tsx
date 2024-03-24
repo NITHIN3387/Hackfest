@@ -4,6 +4,7 @@ import "./globals.css";
 import { DarkLightToggler } from "@/components/dark-light-toggler";
 import { Navbar } from "@/components/navbars";
 import { AuthProvider } from "@/contexts/authContext";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta httpEquiv="Permissions-Policy" content="interest-cohort=()" />
+      </Head>
       <body className={inter.className + " dark:bg-black dark:text-white"}>
         <AuthProvider>
           <Navbar />
