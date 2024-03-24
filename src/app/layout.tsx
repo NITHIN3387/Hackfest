@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { DarkLightToggler } from "@/components/dark-light-toggler";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className + " dark:bg-black dark:text-white"}>
+        {children}
+        <DarkLightToggler />
+      </body>
     </html>
   );
 }
