@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+        <meta httpEquiv="Permissions-Policy" content="interest-cohort=()" />
       </head>
       <body className={inter.className + " dark:bg-black dark:text-white"}>
         <AuthProvider>
