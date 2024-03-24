@@ -1,13 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export',
   async headers() {
-    return  ([
+    return  [
       {
-        key: "Permissions-Policy",
-        value: "interest-cohort=()"
+        source: "/:slug*",
+        headers: [
+          {
+            key: "Permissions-Policy",
+            value: "interest-cohort=()"
+          }
+        ]
       }
-    ])
+    ]
   }
 };
 
