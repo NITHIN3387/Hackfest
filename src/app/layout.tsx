@@ -20,10 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta httpEquiv="Permissions-Policy" content="interest-cohort=()" />
-      </Head>
       <body className={inter.className + " dark:bg-black dark:text-white"}>
+        <Head>
+          <meta httpEquiv="Permissions-Policy" content="interest-cohort=()" />
+        </Head>
         <AuthProvider>
           <Navbar />
           {children}
