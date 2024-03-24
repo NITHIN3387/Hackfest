@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { DarkLightToggler } from "@/components/dark-light-toggler";
 import { Navbar } from "@/components/navbars";
-import { AuthProvider } from "@/contexts/authContext"
+import { AuthProvider } from "@/contexts/authContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+      </head>
       <body className={inter.className + " dark:bg-black dark:text-white"}>
         <AuthProvider>
           <Navbar />
